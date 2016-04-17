@@ -28,5 +28,8 @@ public class Main {
     private static void manage() throws Exception {
         Long upTime = (Long) mBeanServer.getAttribute(objectName, "UpTime");
         System.out.println(upTime);
+        Thread.sleep(5*1000);
+        upTime = (Long) mBeanServer.getAttribute(objectName, "UpTime");
+        System.out.println(upTime);
     }
 }
